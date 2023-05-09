@@ -1,0 +1,11 @@
+<div class="bg-dark text-light p-5">
+  <h3 class="text-warning text-center">Gallary Component</h3>
+  <div class="card text-dark">
+    <img [src]="imgSrc" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <p class="card-text">{{ title }}</p>
+      <p class="card-text">{{ flag ? "Welcome From ITI" : "Hello Dot Net" }}</p>
+      <button (click)="showGallar()" class="btn btn-dark">Show More !</button>
+    </div>
+  </div>
+</div>
