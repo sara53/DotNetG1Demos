@@ -1,0 +1,67 @@
+<div class="bg-dark p-5 text-center text-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-8">
+        <input
+          type="text"
+          [(ngModel)]="inputValue"
+          class="form-control"
+          placeholder="Enter Task Name"
+        />
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <button class="btn btn-warning w-100" (click)="addToList()">Add</button>
+      </div>
+    </div>
+    <div
+      class="row mt-4 text-dark"
+      *ngFor="let todo of todosList; let i = index"
+    >
+      <div class="col-sm-6 col-md-8">
+        <p class="bg-secondary p-2 rounded">{{ todo }}</p>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <button class="btn btn-outline-danger w-100" (click)="removeTodo(i)">
+          Remove
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- <ng-container *ngFor="let i of [1, 2, 3]" >
+    <h2>Hello</h2>
+    <h3>Hello2</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet saepe, iste
+      excepturi provident facere quibusdam esse est ipsum illo at voluptatem
+      sequi eos quos voluptates? Unde amet ea atque in.
+    </p>
+  </ng-container> -->
+  <!-- 
+  <div class="mt-4" [ngSwitch]="count">
+    <p *ngSwitchCase="0" class="text-danger">Your fav color is : red</p>
+    <p *ngSwitchCase="'green'" class="text-success">
+      Your fav color is : green
+    </p>
+    <p *ngSwitchCase="'blue'" class="text-primary">Your fav color is : blue</p>
+    <p *ngSwitchDefault class="text-muted">You don't have any fav color</p>
+  </div> -->
+
+  <!-- <p
+    [ngStyle]="{
+      color: flag ? 'red' : 'green',
+      backgroundColor: isSpecial ? '#fff' : '#000',
+      padding: '20px'
+    }"
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quod
+    facere explicabo facilis perspiciatis odit voluptatum, omnis ut dicta ab
+    reprehenderit tempora debitis necessitatibus a atque optio ratione minus
+    aspernatur!
+  </p> -->
+  <!-- <p [ngClass]="{ 'bg-success mt-4': flag }">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quod
+    facere explicabo facilis perspiciatis odit voluptatum, omnis ut dicta ab
+    reprehenderit tempora debitis necessitatibus a atque optio ratione minus
+    aspernatur!
+  </p> -->
+</div>
