@@ -1,0 +1,14 @@
+<div class="alert alert-info text-center">
+  <h2 class="bg-light p-2 rounded">Product Section</h2>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+  <div class="container">
+    <div class="row">
+      <ng-container *ngFor="let product of products">
+        <app-product-details
+          class="col-md-3"
+          [myProduct]="product"
+        ></app-product-details>
+      </ng-container>
+    </div>
+  </div>
+</div>
