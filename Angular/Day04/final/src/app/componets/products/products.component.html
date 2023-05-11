@@ -1,0 +1,35 @@
+<div class="mt-5 bg-light text-dark p-5">
+  <i
+    [routerLink]="['/products/0/edit']"
+    class="bi bi-plus-square-fill fs-1 mb-3 text-primary"
+  ></i>
+  <div class="container mt-5">
+    <table class="table text-dark">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of porducts">
+          <th scope="row">{{ product.id }}</th>
+          <td>{{ product.productName }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.quantity }}</td>
+          <td>
+            <i class="fs-3 text-info mx-1 bi bi-pencil-square"></i>
+            <i class="fs-3 text-danger mx-1 bi bi-trash"></i>
+            <i
+              [routerLink]="['/products', product.id]"
+              class="fs-3 text-warning mx-1 bi bi-eye-fill"
+            ></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
